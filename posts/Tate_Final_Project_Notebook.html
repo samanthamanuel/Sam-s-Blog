@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-03-17">
 <meta name="description" content="Tate Final Project Notebook">
 
-<title>samsblog - Tate Final Project</title>
+<title>samsblog - Tate Final Project: Blog Post</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,7 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Tate Final Project</h1>
+      <h1 class="title">Tate Final Project: Blog Post</h1>
                   <div>
         <div class="description">
           Tate Final Project Notebook
@@ -218,8 +218,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="dh140-final-project-tate-collections" class="level1">
-<h1>DH140 Final Project: Tate Collections</h1>
+<section id="dh140-final-project-tate-collections-blog-post" class="level1">
+<h1>DH140 Final Project: Tate Collections Blog Post</h1>
 <p>by Samantha Alexis Manuel // 03.14.2023.</p>
 <p><strong>Link to Data Source:</strong> <a href="https://corgis-edu.github.io/corgis/csv/tate/">Tate CSV File From the CORGIS Dataset Project</a></p>
 <p><br> <br> <br></p>
@@ -236,22 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><em>Collection Diversity.</em> Are there any trends or preferences that exist with the types of objects chosen to be a part of the collection?</p>
 <p><em>Artist Birth Locations.</em> Are there any trends in the collection regarding the artist’s location of birth?</p>
 <p><em>Acquisition History.</em> During which time periods were there more/less of a trend in acquiring artwork?</p>
-<p><br> <br> <br></p>
-<p><strong>Motivation</strong></p>
-<p>I have always been interested in our GLAM (Galleries, Libraries, Archives, Museums) institutions and how we can increase accessibility and representation. For this reason, I am specifically looking at the museum’s acquisitions of international modern and contemporary art. When I started working at the J. Paul Getty Museum last summer and now at the Los Angeles County Museum of Art (LACMA), I had to learn about The Museum System (TMS) which is a museum management software used to track and catalog their collections. Multiple modules exist on the platform: Object information, Constituents, Loans, Provenance research, Touring Schedules, Condition Reports, and much more (which was then exported to make this lovely data set). As a personal interest/goal, I aspire for an arts administration career and desire to learn more about increasing accessibility and advocacy within arts/culture-based institutions. I believe that I can accomplish this by also learning the ways in which coding/data analysis can be used to increase the transparency of operations and collections at GLAM institutions.</p>
-<p><br> <br> <br></p>
-<p><strong>Prior Related Work</strong></p>
-<p>During the COVID-19 lockdown, museums closed all across the world. This, among other reasons, are why many museums are rethinking their digital initiatives. There are more online and VR exhibitions as well as a recent movement to digitize collections for archival and research purposes. With the new movement to digitize museum collections, this presents an opportunity for anyone interested in museums and their collections to interpret the data.</p>
-<p>In 2019, the National Gallery of Art hosted a datathon, dubbed as “<a href="https://www.nga.gov/press/2019/datathon.html">Coding our Collection: The National Gallery of Art Datathon</a>.” They were the first American museum to host a Datathon using their collection. The gallery invited interdisciplinary teams of data scientists and art historians to analyze and visualize their permanent collection data that was exported from The Museum System. Overall, the event revealed many trends about the collection regarding acquisitions or display over time (as in, how often they display their artworks).</p>
 </section>
-<section id="methods" class="level1">
-<h1>Methods</h1>
+<section id="explanation-of-data-analytical-process" class="level1">
+<h1>Explanation of Data + Analytical Process</h1>
 <p><strong>Explanation of Data</strong></p>
 <p>Tate is an arts/cultural institution that holds the UK’s national collection of British, international modern, and contemporary art. This particular dataset includes metadata about the collection of artworks the Tate holds.</p>
 <p>The data from the Tate CSV File, from the CORGIS Dataset Project, contains information about the artist (gender, name, role, birth year, birth location, year of death), artwork information (medium, thumbnail, title, url, dimensions), and metadata (acquisition dates, date of creation, credit). <br> <br> <br></p>
 <p><strong>Analytical Process</strong></p>
 <p><strong><em>Code for data analysis:</em></strong> Python, Matplotlib, nltk.probability</p>
-<p>Analysis Procedures: - Import Matplotlib, Numpy, Pandas, from nltk.probability import FreqDist - Import Tate Collections CSV as pandas dataframe - Clean the data frame of any Na or Nan - Run several exploratory data analysis to guide further visualizations - Create cleaned, separated datasets for each of the variables - Generate data visualizations to answer my research questions</p>
+<p>Analysis Procedures: - Import Matplotlib, Numpy, Pandas, from nltk.probability import FreqDist - Import Tate Collections CSV as pandas dataframe - Clean the data frame of any Na or Nan - Run several exploratory data analysis to guide further visualizations - Create cleaned, separated datasets for each of the variables - Generate data visualizations to answer my research questions - Contextualize and present my findings from the data in the Discussion section of the Project</p>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
@@ -900,107 +893,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<p><strong>Data Exploration</strong></p>
-<p><strong><em>Several Notes about the Dataset</em></strong></p>
-<p>Before showing you the exploratory data visualizations, I’d like to take a moment to address any possible silences or gaps in the data. That’s why I wanted to look at both data sets next to each other, with and without the “na” or “nan” values. I wanted to see what information is not included in their collections programs because the recorded data of a museum’s collection of objects, ideally, should be recorded once and then repurposed as needed. Cataloging is a big human investment!</p>
-<p>My primary focus on working with this dataset is to identify any trends in collecting and to determine whether or not their collections are diverse/representative. However, one important note about the dataset is that there are gaps that are missing metadata regarding the acquisition date, creation decade, and year. Some information regarding the artist’s birth/death location and year are also missing.</p>
-<p>Gaps/silences in this dataset may be attributed to the process of digital cataloging itself. It’s a human process with the possibility of error. Even new or ongoing provenance research can result in changes to the title, date, or attribution. In addition to this, information/demographics of the artists is another complicated/complex history in itself. Therefore, museum data is inherently complex like the very objects it represents.</p>
-<p>Current cataloging standards (whether museum, VR collections, special collections, or archive) hold that nationality, birth, and death of an artist should be recorded whenever it is known. However, in this particular dataset, I see nothing providing information about the race/ethnicity of the artists (which would have been interesting to note as well).</p>
-<p><br> <br> <br></p>
-<p><strong><em>Summary Statistics (Found Above) + Exploratory Visualizations (Found Below)</em></strong></p>
-<p>Above is a table of the data’s summary statistics as well as a data itself imported as a pandas dataset (this is also repeated again taking out any row containing an “na” or “nan” values. There are 3332 rows and 18 columns. In other words, there are 3332 listed objects within this collection. After the data is cleaned, we are left with 1076 items with information all accounted for.</p>
-<p>Specifically looking at the chart of descriptive statistics, it lists several columns of information, mainly “dimensions”, “metadata”, and “artist birth/death year.” I won’t be focusing on analyzing the dimensions of the artworks within the collection, so let’s take another look at the remaining columns (only looking at the minimum and maximum). Several things to note here:</p>
-<ul>
-<li>In terms of the acquisition date, the latest artwork they acquired (in the context of this collection) is from 2013 while the earliest is from 1842.</li>
-<li>As for the metadata for the creation decade, it aligns with the finding above, that the last decade of acquisitions come from the 2010s.</li>
-<li>Finally, for the artist’s birth year, the youngest artist’s work they hold was born in 2004! Meaning that this artist was only 18.</li>
-</ul>
-<p>Below are some of my exploratory visualizations while attempting to address some of the research questions I proposed. These are made with the second dataset but were helpful in guiding the creation of better ones to truly answer my questions.</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exploratory Data Visualization 1</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.hist(tatedf2[<span class="st">"metadata.acquisition date"</span>])</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Dates of Acquisition'</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>&lt;function matplotlib.pyplot.show(close=None, block=None)&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-8-output-2.png" class="img-fluid"></p>
-</div>
-</div>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exploratory Data Visualization 2 </span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.hist(tatedf2[<span class="st">"metadata.creation decade"</span>])</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Creation Dates of Artworks by decade'</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>&lt;function matplotlib.pyplot.show(close=None, block=None)&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-9-output-2.png" class="img-fluid"></p>
-</div>
-</div>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Exploratory Data Visualization 3</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>tatedf2.boxplot(column <span class="op">=</span> <span class="st">"metadata.acquisition date"</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot of Acquisition Dates'</span>)</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>&lt;function matplotlib.pyplot.show(close=None, block=None)&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-10-output-2.png" class="img-fluid"></p>
-</div>
-</div>
-<div class="cell" data-scrolled="true" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Exploratory Data Visualization 4</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>tatedf2.boxplot(column <span class="op">=</span> <span class="st">"artist.birth.year"</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot of Artist Birth Year'</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>&lt;function matplotlib.pyplot.show(close=None, block=None)&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-11-output-2.png" class="img-fluid"></p>
-</div>
-</div>
 <p><strong>Findings + Visuals</strong></p>
-<p>Now that I’ve made some exploratory data visualizations, I can now have a better sense of how I might specifically clean my data to get a better analysis of the questions I’m seeking to answer! For this specific section, I made cleaned, separated datasets for each of the variables I was seeking to analyze. Here’s what I found:</p>
+<p>For this specific section, I made cleaned, separated datasets for each of the variables I was seeking to analyze. Here’s what I found:</p>
 <div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Visual on Artist Gender Diversity </span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>genderdf <span class="op">=</span> tatedf.dropna(subset<span class="op">=</span>[<span class="st">'artist.gender'</span>])</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>gender <span class="op">=</span> genderdf[<span class="st">"artist.gender"</span>]</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>genderfreq <span class="op">=</span> FreqDist(gender)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>genderfreq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Visual on Artist Gender Diversity </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>genderdf <span class="op">=</span> tatedf.dropna(subset<span class="op">=</span>[<span class="st">'artist.gender'</span>])</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>gender <span class="op">=</span> genderdf[<span class="st">"artist.gender"</span>]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>genderfreq <span class="op">=</span> FreqDist(gender)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>genderfreq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>FreqDist({'Male': 2791, 'Female': 492})</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="dv">2791</span>, <span class="dv">492</span>])</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>mylabels <span class="op">=</span> [<span class="st">"Male"</span>, <span class="st">"Female"</span>]</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tate Collection: Artist Gender Diveristy'</span>)</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.pie(y, labels <span class="op">=</span> mylabels)</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>plt.show() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="dv">2791</span>, <span class="dv">492</span>])</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mylabels <span class="op">=</span> [<span class="st">"Male"</span>, <span class="st">"Female"</span>]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tate Collection: Artist Gender Diveristy'</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.pie(y, labels <span class="op">=</span> mylabels)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>plt.show() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
+<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p><strong>Artist Gender Diversity: Findings</strong></p>
 <p>If this graphic wasn’t enough to show it, there is a shocking lack of female artists in museums. Out of a collection of 3,283 artists, only 14% are female artists. That leaves us with 86% of the artists represented being male.</p>
 <div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Visual of Diversity of Artworks </span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>mediumdf <span class="op">=</span> tatedf.dropna(subset<span class="op">=</span>[<span class="st">'data.medium'</span>])</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>medium <span class="op">=</span> mediumdf[<span class="st">"data.medium"</span>]</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>mediumfreq <span class="op">=</span> FreqDist(medium)</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>mediumfreq.most_common(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Visual of Diversity of Artworks </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>mediumdf <span class="op">=</span> tatedf.dropna(subset<span class="op">=</span>[<span class="st">'data.medium'</span>])</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>medium <span class="op">=</span> mediumdf[<span class="st">"data.medium"</span>]</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>mediumfreq <span class="op">=</span> FreqDist(medium)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>mediumfreq.most_common(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>[('Oil paint on canvas', 844),
  ('Lithograph on paper', 215),
@@ -1015,30 +940,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mediumtype <span class="op">=</span> [<span class="st">'Oil paint on canvas'</span>, <span class="st">'Lithograph on paper'</span>,<span class="st">'Screenprint on paper'</span>,<span class="st">'Watercolour on paper'</span>,<span class="st">'Photograph, gelatin silver print on paper'</span>,<span class="st">'Bronze'</span>,<span class="st">'Graphite on paper'</span>,<span class="st">'Graphite and watercolour on paper'</span>, <span class="st">'Oil paint on board'</span>, <span class="st">'Acrylic paint on canvas'</span> ]</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>mediumquantity <span class="op">=</span> [<span class="dv">844</span>, <span class="dv">215</span>, <span class="dv">107</span>, <span class="dv">85</span>, <span class="dv">70</span>, <span class="dv">70</span>, <span class="dv">65</span>, <span class="dv">54</span>, <span class="dv">51</span>, <span class="dv">50</span>]</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>plt.barh(mediumtype, mediumquantity)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tate Collection: 10 most common Mediums of Artwork'</span>)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Artwork Mediums'</span>)</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mediumtype <span class="op">=</span> [<span class="st">'Oil paint on canvas'</span>, <span class="st">'Lithograph on paper'</span>,<span class="st">'Screenprint on paper'</span>,<span class="st">'Watercolour on paper'</span>,<span class="st">'Photograph, gelatin silver print on paper'</span>,<span class="st">'Bronze'</span>,<span class="st">'Graphite on paper'</span>,<span class="st">'Graphite and watercolour on paper'</span>, <span class="st">'Oil paint on board'</span>, <span class="st">'Acrylic paint on canvas'</span> ]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>mediumquantity <span class="op">=</span> [<span class="dv">844</span>, <span class="dv">215</span>, <span class="dv">107</span>, <span class="dv">85</span>, <span class="dv">70</span>, <span class="dv">70</span>, <span class="dv">65</span>, <span class="dv">54</span>, <span class="dv">51</span>, <span class="dv">50</span>]</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>plt.barh(mediumtype, mediumquantity)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tate Collection: 10 most common Mediums of Artwork'</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Artwork Mediums'</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>&lt;function matplotlib.pyplot.show(close=None, block=None)&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-15-output-2.png" class="img-fluid"></p>
+<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-11-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 <p><strong>Collection Diversity: Findings</strong></p>
 <p>Other than looking about information about the artists themselves, I contend that it is important to see the diversity of the actual artworks themselves. Commonly, art galleries or spaces will be dedicated to a particular medium. As for the Tate’s collection and their focus on modern art, it appears that most of their works are oil paint on canvas (having 844 works).</p>
 <div class="cell" data-scrolled="true" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Visuals on Artist Diveristy (based on birth location)</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>birthlocdf <span class="op">=</span> tatedf.dropna(subset<span class="op">=</span>[<span class="st">'artist.birth.location'</span>])</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>birthloc <span class="op">=</span> birthlocdf[<span class="st">"artist.birth.location"</span>]</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>birthlocfreq <span class="op">=</span> FreqDist(birthloc)</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>birthlocfreq.most_common(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Visuals on Artist Diveristy (based on birth location)</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>birthlocdf <span class="op">=</span> tatedf.dropna(subset<span class="op">=</span>[<span class="st">'artist.birth.location'</span>])</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>birthloc <span class="op">=</span> birthlocdf[<span class="st">"artist.birth.location"</span>]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>birthlocfreq <span class="op">=</span> FreqDist(birthloc)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>birthlocfreq.most_common(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>[('London, United Kingdom', 442),
  ('Paris, France', 54),
@@ -1053,35 +978,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell" data-scrolled="true" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>birthloctype <span class="op">=</span> [<span class="st">'London, United Kingdom'</span>,<span class="st">'Paris, France'</span>,<span class="st">'Edinburgh, United Kingdom'</span>,<span class="st">'New York, United States'</span>,<span class="st">'Glasgow, United Kingdom'</span>,<span class="st">'Dublin, Ireland'</span>, <span class="st">'England, United Kingdom'</span>, <span class="st">'Liverpool, United Kingdom'</span>, <span class="st">'Birmingham, United Kingdom'</span>, <span class="st">'Bristol, United Kingdom'</span>]</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>birthlocquantity <span class="op">=</span> [<span class="dv">442</span>, <span class="dv">54</span>, <span class="dv">47</span>, <span class="dv">38</span>, <span class="dv">35</span>, <span class="dv">28</span>, <span class="dv">28</span>, <span class="dv">23</span>, <span class="dv">22</span>, <span class="dv">20</span>]</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>plt.barh(birthloctype, birthlocquantity)</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tate Collection: 10 most common Birth Locations of Artist'</span>)</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Birth Locations'</span>)</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>birthloctype <span class="op">=</span> [<span class="st">'London, United Kingdom'</span>,<span class="st">'Paris, France'</span>,<span class="st">'Edinburgh, United Kingdom'</span>,<span class="st">'New York, United States'</span>,<span class="st">'Glasgow, United Kingdom'</span>,<span class="st">'Dublin, Ireland'</span>, <span class="st">'England, United Kingdom'</span>, <span class="st">'Liverpool, United Kingdom'</span>, <span class="st">'Birmingham, United Kingdom'</span>, <span class="st">'Bristol, United Kingdom'</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>birthlocquantity <span class="op">=</span> [<span class="dv">442</span>, <span class="dv">54</span>, <span class="dv">47</span>, <span class="dv">38</span>, <span class="dv">35</span>, <span class="dv">28</span>, <span class="dv">28</span>, <span class="dv">23</span>, <span class="dv">22</span>, <span class="dv">20</span>]</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>plt.barh(birthloctype, birthlocquantity)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tate Collection: 10 most common Birth Locations of Artist'</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Birth Locations'</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>&lt;function matplotlib.pyplot.show(close=None, block=None)&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-17-output-2.png" class="img-fluid"></p>
+<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-13-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 <p><strong>Artist Diversity (based on birth location): Findings</strong></p>
 <p>This may be of no surprise as most of the artists are coming from the United Kingdom, with most of them being born in London. Following that, there is France, the United States, and then Ireland.</p>
 <div class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Histogram of Acquistion History </span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>acquisitiondf <span class="op">=</span> tatedf.dropna(subset<span class="op">=</span>[<span class="st">'data.medium'</span>])</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>plt.hist(acquisitiondf[<span class="st">"metadata.acquisition date"</span>])</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tate Collection: Dates of Acquisition'</span>)</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Histogram of Acquistion History </span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>acquisitiondf <span class="op">=</span> tatedf.dropna(subset<span class="op">=</span>[<span class="st">'data.medium'</span>])</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>plt.hist(acquisitiondf[<span class="st">"metadata.acquisition date"</span>])</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tate Collection: Dates of Acquisition'</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>&lt;function matplotlib.pyplot.show(close=None, block=None)&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
+<p><img src="Tate_Final_Project_Notebook_files/figure-html/cell-14-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 <p><strong>Acquisition History: Findings</strong></p>
@@ -1090,11 +1015,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="discussion" class="level1">
 <h1>Discussion</h1>
 <p><strong>What does my analysis of the Tate Collection show</strong></p>
-<p>For my analysis, I would like to speak more on how these variables (Gender, Artwork Medium, Artist Diversity, and Acquisition History) are related to each other. There are many factors that drive gender, collection, and artist imbalance, the main one being acquisitions. A museum’s acquisition committee (most of the time including the museum director, curator, and board of directors) may have different motivations or have more of a bias towards name recognition or donor biases.</p>
-<p><strong><em>Gender Diversity.</em></strong> My findings align with the present trends in museums, that there are more men and women artists in the collection. What steps should we make towards more gender equity within our institutions? So far, and from what I have learned while working in museums, it seems that curators are leading this shift in acquisitions. Museum curators are essential in the acquisition process because they conduct research to make cases to the board and directors to get artworks (different from the “gifts” or artwork donations museums receive, this process is a lot more intentional). Some museums have even deaccessioned works of white male artists in order to fund more diverse acquisitions.</p>
-<p><strong><em>Collection Diversity.</em></strong> Oil painting is a traditional artwork style and continues to be one of the most common techniques for painting for several centuries now. It’s one of the most popular artistic mediums because they are valued more due to their preservative nature (notice how a lot of oil paintings have stood the test of time). This also aligns with my findings above, that oil paint on canvas is the most popular artistic medium (having 844 objects of this type within their collections). In the art historical cannon, many historians attempt to position this medium as an advanced form. Western art is greatly associated with this medium (which could cause some issues, perpetuating a harmful bias over Western or European art).</p>
-<p><strong><em>Artist Birth Locations.</em></strong> When you look at the “tombstone” of an object, in other words, a museum label, it often contains the birth location of the artist. The reason why I chose to analyze this variable is because I was curious about which community/places the museum collects from. Now, let’s take a look at Tate’s mission statement: “Our mission is to increase the public’s enjoyment and understanding of British art from the sixteenth century to the present day and of international modern and contemporary art.” The keyword, “international.” I contend that this collection is far from that, that most of the artist’s birth locations are Euro-Western centered. What steps can the Tate take to have a more “international” representation of modern art?</p>
-<p><strong><em>Acquisition History.</em></strong> Finally, let’s take a look at their trend of acquisitions. A museum’s history of acquisitions should also reflect their desire to add more depth and representation to their collection. The <a href="https://news.artnet.com/art-world/letter-from-the-editors-introducing-the-2022-burns-halperin-report-2227445">2022 Burns Halperin Report</a> is the most recent report on representation in U.S. museums and the international art market. In this latest iteration, they examined the representation of work by Black artists, female-identifying artists, and Black female-identifying artists by tracing acquisition of museums, galleries, and auction results for more than a decade. Their biggest finding was that “11 percent of acquisitions at U.S. museums were of work by female-identifying artists and only 2.2 percent were by Black American artists.” Overall, the hope is that data like this can serve to challenge assumptions about a museum’s mission statement while exploring in which areas museums can better reflect the communities they serve.</p>
+<p>There are many factors that drive gender, collection, and artist imbalance, the main one being acquisitions. A museum’s acquisition committee (most of the time including the museum director, curator, and board of directors) may have different motivations or have more of a bias towards name recognition or donor biases.</p>
+<p><strong><em>Gender Diversity.</em></strong> My findings align with the present trends in museums, that there are more men and women artists in the collection. Museum curators are essential in the acquisition process because they conduct research to make cases to the board and directors to get artworks (different from the “gifts” or artwork donations museums receive, this process is a lot more intentional).</p>
+<p><strong><em>Collection Diversity.</em></strong> Oilis one of the most popular artistic mediums because they are valued more due to their preservative nature (notice how a lot of oil paintings have stood the test of time). This also aligns with my findings above, that oil paint on canvas is the most popular artistic medium (having 844 objects of this type within their collections). In the art historical cannon, many historians attempt to position this medium as an advanced form, which could cause some issues, perpetuating a harmful bias over Western or European art.</p>
+<p><strong><em>Artist Birth Locations.</em></strong> When you look at the “tombstone” of an object, in other words, a museum label, it often contains the birth location of the artist. Now, let’s take a look at Tate’s mission statement: “Our mission is to increase the public’s enjoyment and understanding of British art from the sixteenth century to the present day and of international modern and contemporary art.” The keyword, “international.” I contend that this collection is far from that, that most of the artist’s birth locations are Euro-Western centered.</p>
+<p><strong><em>Acquisition History.</em></strong> A museum’s history of acquisitions should also reflect their desire to add more depth and representation to their collection. As you can see, there has been an increase in acquistions overalOverall, the hope is that data like this can serve to challenge assumptions about a museum’s mission statement while exploring in which areas museums can better reflect the communities they serve.</p>
 <p><br> <br> <br></p>
 <p><strong>What is the big picture + How are the findings useful</strong></p>
 <p>Many museums now have their collections online and anyone interested in the topic is allowed to use it. It’s interesting to note what kind of information is recorded in collection systems regarding the artwork’s properties, context, and information about the artists who made them (like nationality, birth, and death). In collections management systems like The Museum System (TMS), you will typically find details about medium, provenance research, and dimensions.</p>
